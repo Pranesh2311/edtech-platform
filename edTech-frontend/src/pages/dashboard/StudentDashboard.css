@@ -1,0 +1,184 @@
+/* ============================================
+   Student Dashboard Styles
+   ============================================ */
+
+.student-dashboard {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ── Welcome Banner ── */
+.welcome-banner {
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+  border-radius: var(--radius-xl);
+  padding: var(--space-6) var(--space-8);
+  margin-bottom: var(--space-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.welcome-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.welcome-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  gap: var(--space-6);
+}
+
+.welcome-text h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: white;
+  margin: 0 0 var(--space-2);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.welcome-text p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--font-size-sm);
+  margin: 0;
+  max-width: 500px;
+}
+
+.welcome-actions .btn-premium.btn-filled {
+  background: white;
+  color: var(--primary-700);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-actions .btn-premium.btn-filled:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.chart-container {
+  margin-top: var(--space-3);
+}
+
+/* ── Video Cards ── */
+.video-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.video-mini-card {
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: var(--bg-secondary);
+}
+
+.video-mini-card:hover {
+  border-color: var(--primary-200);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .video-mini-card:hover {
+  border-color: var(--primary-800);
+}
+
+.video-mini-thumb {
+  position: relative;
+  height: 130px;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+}
+
+.video-mini-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+}
+
+.video-duration-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+}
+
+.video-mini-info {
+  padding: var(--space-3);
+}
+
+.video-mini-info h4 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin: 0 0 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.video-mini-info p {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .video-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .welcome-banner {
+    padding: var(--space-5);
+  }
+
+  .welcome-text h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .video-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

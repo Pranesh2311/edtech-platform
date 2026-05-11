@@ -1,0 +1,292 @@
+I want to build an education app(Ed-Tech) online platform...
+
+Start with first Module:
+mock tests
+
+Use Spring Boot backend with Postgresql as database, React frontend provide me step by step guide start from project
+
+Create Exams
+Add Questions
+Student Attend Test
+Timer
+Auto Submit
+Result Calculation
+Rank/Score
+Dashboard
+
+User Register/Login
+Admin Panel
+
+
+NEXT BEST FEATURES
+
+Next you should implement:
+Edit Question
+Question validation
+Rich text editor
+Image upload
+Negative marking
+Random questions
+Timer-based test engine
+Student test attempt system
+Auto result generation
+JWT login security
+
+NEXT BEST STEP
+
+After this, next implement:
+
+Correct answer dropdown
+Option validation
+Question categories
+Difficulty levels
+Image upload
+Math equation support
+Mock test attempt screen
+Timer system
+Result calculation
+Student dashboard
+
+✅ Result History
+✅ Student-wise Results
+✅ Leaderboard
+✅ Rank Calculation
+✅ Negative Marking
+✅ Analytics Dashboard
+✅ Performance Graphs
+✅ AI Recommendations
+✅ Weak Topic Analysis
+✅ Time Analytics
+✅ Percentile Calculation
+
+✅ Auto-save answers
+✅ Full-screen exam mode
+✅ Anti-cheating tab switch detection
+✅ Camera monitoring
+✅ Negative marking
+✅ Section-wise timer
+✅ Resume exam system
+✅ Attempt history
+✅ AI proctoring
+
+✅ JWT API Security Filter
+✅ Protected Backend APIs
+✅ Refresh Tokens
+✅ Email OTP Verification
+✅ Forgot Password Email Reset
+✅ Admin Dashboard
+✅ Student Dashboard
+✅ Leaderboard
+✅ Test Analytics
+✅ Certificate Generation
+✅ Payment Gateway
+✅ Subscription Plans
+
+
+I want to build an education app(Ed-Tech) online platform (android version) for mobile where 
+
+I want to build an education app. I want this below features: 
+1) Login, Logout, Forget Password, Admin Register, User Register 
+ADMIN Can:
+Create Exams
+Add Questions
+View Results
+Manage Users
+
+USER/STUDENT Can:
+Login
+Attempt Tests
+View Own Results
+
+2) Clear dashboard 
+3) Batch wise I need to do it: Suppose eg:- Batch-1 : For Class 11 that is only visible to them only whom I want to share 
+4) Auto record off all lectures(Audio & Video both), if anyone missed it then they should be go through this recordings 
+5) Also auto course means like udemy which I want to show and if anyone wants to purchase they'll get it purchased it from that app 
+6) Also messaging system during class hours they'll able to messaged there doubts to the mentor 
+7) Security system very important-->> no screenshot, recordings downloads are allowed through outside third party app also through url means in youtube through external url it is easy to download the video this I need to make very strict 
+8) Study materials module where I'll placed my pdf, notes available for download
+
+-->> Use Spring Boot and react now for web application later for Student Mobile App(Flutter) we will use
+
+later:
+
+AI tutor
+Analytics
+Quiz
+Exam system
+Attendance
+Leaderboard
+
+Teacher Registration Module
+Features:
+Admin creates teacher
+Teacher login
+Teacher dashboard
+Teacher batch assignment
+Teacher analytics
+
+STUDENT ENROLLMENT MODULE
+Features:
+✅ Assign students to batch
+✅ Remove students
+✅ Batch student count
+   Student attendance
+   Batch progress tracking
+
+Later you should move this mapping into: BatchMapper using:
+MapStruct OR dedicated mapper class
+
+because enterprise apps avoid huge service mapping methods.
+
+Then:
+BATCH-WISE EXAMS
+
+Then:
+BATCH-WISE NOTES / VIDEOS
+
+✅ Real File Upload
+Instead of URL:
+Upload PDF
+Upload DOC
+Upload ZIP
+
+Using: Spring Boot Multipart, Cloudinary, AWS S3
+
+✅ Deadline Validation
+Prevent submission after deadline.
+
+✅ Assignment Analytics Dashboard
+Submission %
+Pending students
+Top scorers
+Late submissions
+
+✅ Notification System
+New assignment alert
+Deadline reminder
+Marks published notification
+
+VIDEO WATCH TRACKING
+Track:
+Last watched time
+Completion %
+Resume learning
+DRM / PREMIUM SECURITY
+
+Prevent:
+URL sharing
+Video downloading
+Unauthorized access
+ADVANCED VIDEO SYSTEM
+HLS Streaming
+
+ENTERPRISE UPGRADE PATH
+Future production upgrades:
+ADVANCED BILLING
+✅ Coupons
+✅ Promo codes
+✅ Referral rewards
+✅ Wallet credits
+✅ GST invoices
+
+ANALYTICS
+✅ Revenue dashboard
+✅ Monthly recurring revenue
+✅ Subscription retention
+✅ Churn analysis
+
+AI FEATURES
+Future AI monetization:
+✅ AI tutor subscription
+✅ Premium AI doubt solving
+✅ AI mock tests
+✅ AI coding evaluator
+
+NEXT STEP
+You should now implement:
+REAL PAYMENT VERIFICATION
+✅ Razorpay Signature Verification
+✅ Fake Payment Protection
+✅ Duplicate Payment Prevention
+✅ Expired Subscription Handling
+✅ Payment Failure Handling
+This is VERY important before production deployment.
+
+ENTERPRISE NEXT UPGRADES
+
+Future production upgrades:
+
+ADVANCED BILLING
+
+✅ Coupons
+✅ GST invoice
+✅ Wallet
+✅ Referral rewards
+✅ EMI
+
+ADVANCED ACCESS CONTROL
+✅ Trial access
+✅ Time-limited unlock
+✅ Device restriction
+✅ Concurrent login blocking
+
+ADVANCED VIDEO SECURITY
+✅ DRM
+✅ Anti-download
+✅ HLS streaming
+✅ Watermarking
+
+AI MONETIZATION
+
+Future premium AI features:
+✅ AI tutor
+✅ AI doubt solving
+✅ AI coding assistant
+✅ AI interview evaluator
+
+FUTURE ADVANCED FEATURES
+Later you can build:
+✅ Real-time WebSocket notifications
+✅ Push notifications
+✅ Email notifications
+✅ SMS notifications
+✅ Notification preferences
+✅ Firebase notifications
+✅ Notification sound
+✅ Admin broadcast system
+✅ Scheduled notifications
+✅ Expiry notifications
+
+BEST NEXT STEP AFTER NOTIFICATION
+After Notification module:
+1. Attendance Module
+2. Chat Module
+3. Live Classes
+4. Video Lectures
+5. Payment Module
+6. AI Assistant
+7. Analytics Dashboard
+8. Certificate Generation
+
+Then:
+BEST DEVELOPMENT ORDER
+Recommended flow:
+1. Authentication
+2. Dashboard
+3. Batch Module
+4. Course Module
+5. Exam Module
+6. Result Module
+7. Leaderboard
+8. Study Material
+9. Video Module
+10. Payment
+11. Subscription Access
+12. Doubt Module
+13. Notification
+14. Mobile APIs
+15. AI Features
+
+import {
+    getAllBatches
+} from "../../batch/services/batchApi";

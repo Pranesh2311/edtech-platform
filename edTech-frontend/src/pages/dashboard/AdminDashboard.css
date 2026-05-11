@@ -1,0 +1,31 @@
+/* ============================================
+   Admin Dashboard Styles
+   ============================================ */
+
+.admin-dashboard {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.dashboard-loading {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.chart-container {
+  margin-top: var(--space-3);
+}
+
+.results-list {
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+/* ── Recharts Overrides ── */
+.recharts-tooltip-cursor {
+  fill: var(--bg-tertiary);
+  opacity: 0.5;
+}
+
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: var(--border-secondary);
+}
