@@ -1,0 +1,15 @@
+cmd -->> Run -->>
+
+curl -X PUT "http://localhost:9200/edtech-ai-notes" ^
+-H "Content-Type: application/json" ^
+-d "{ \"mappings\": { \"properties\": { \"embedding\": { \"type\": \"dense_vector\", \"dims\": 768 } } } }"
+
+In application.properties:
+spring.elasticsearch.uris=http://localhost:9200
+spring.ai.vectorstore.elasticsearch.initialize-schema=false
+spring.ai.vectorstore.elasticsearch.index-name=edtech-ai-notes
+
+
+http://localhost:9200/edtech-ai-notes/_mapping
+http://localhost:9200/edtech-ai-notes
+http://localhost:9200/_cat/indices?v

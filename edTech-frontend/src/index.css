@@ -80,3 +80,7 @@ p {
 .dashboard-layout .container.mt-5 {
   margin-top: 0 !important;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

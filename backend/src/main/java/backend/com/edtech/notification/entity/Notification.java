@@ -31,6 +31,9 @@ public class Notification {
 
     private String type;
 
+    @Column(name = "action_url")
+    private String actionUrl;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

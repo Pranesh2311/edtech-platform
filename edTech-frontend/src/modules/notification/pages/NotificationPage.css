@@ -1,0 +1,62 @@
+.notification-card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    margin-bottom: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    border: 1px solid #eee;
+
+    position: relative;
+}
+
+.notification-card:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.notification-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.unread-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    background: red;
+
+    border-radius: 50%;
+}
+
+.delete-btn {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}

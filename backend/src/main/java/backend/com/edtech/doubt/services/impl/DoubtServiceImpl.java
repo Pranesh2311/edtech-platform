@@ -71,6 +71,9 @@ public class DoubtServiceImpl implements DoubtService {
 
                         .build();
 
+        // FIRST SAVE DOUBT
+        Doubt savedDoubt = doubtRepository.save(doubt);
+
         // SEND NOTIFICATION
         Long teacherId = batch.getTeacher().getId();
 
@@ -80,11 +83,11 @@ public class DoubtServiceImpl implements DoubtService {
         notificationDto.setMessage(student.getFullName() + " posted a new doubt");
         notificationDto.setType("DOUBT");
         notificationDto.setUserId(teacherId);
+        notificationDto.setActionUrl("/doubts/" + savedDoubt.getId());
 
         notificationService.createNotification(notificationDto);
 
-        return doubtRepository.save(doubt);
-
+        return savedDoubt;
     }
 
     @Override
@@ -121,10 +124,7 @@ public class DoubtServiceImpl implements DoubtService {
     }
 
     @Override
-    public DoubtReply replyDoubt(
-            Long doubtId,
-            ReplyDoubtDto dto
-    ) {
+    public DoubtReply replyDoubt(Long doubtId, ReplyDoubtDto dto) {
 
         Doubt doubt =
                 doubtRepository.findById(
@@ -148,30 +148,34 @@ public class DoubtServiceImpl implements DoubtService {
                 DoubtReply.builder()
 
                         .reply(dto.getReply())
-
                         .createdAt(
                                 LocalDateTime.now()
                         )
-
                         .doubt(doubt)
-
                         .user(user)
-
                         .build();
 
-        return replyRepository.save(
-                reply
-        );
+        // SAVE REPLY
+        DoubtReply savedReply = replyRepository.save(reply);
+
+        // SEND NOTIFICATION TO STUDENT
+        NotificationRequestDto notificationDto = new NotificationRequestDto();
+
+        notificationDto.setTitle("New Reply To Your Doubt");
+        notificationDto.setMessage(user.getFullName() + " replied to your doubt");
+        notificationDto.setType("DOUBT_REPLY");
+        notificationDto.setUserId(doubt.getStudent().getId());
+        notificationDto.setActionUrl("/doubts/" + doubt.getId());
+
+        notificationService.createNotification(notificationDto);
+
+        return savedReply;
     }
 
     @Override
-    public List<DoubtReply> getReplies(
-            Long doubtId
-    ) {
+    public List<DoubtReply> getReplies(Long doubtId) {
 
-        return replyRepository.findByDoubtId(
-                doubtId
-        );
+        return replyRepository.findByDoubtId(doubtId);
     }
 
     @Override

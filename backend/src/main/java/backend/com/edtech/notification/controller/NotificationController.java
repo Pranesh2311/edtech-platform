@@ -53,4 +53,12 @@ public class NotificationController {
 
         notificationService.markAsRead(id);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteNotification(
+            @PathVariable Long id
+    ) {
+
+        notificationService.deleteNotification(id);
+    }
 }

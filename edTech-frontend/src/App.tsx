@@ -70,6 +70,10 @@ import DoubtDetails from "./modules/doubt/pages/DoubtDetails";
 // Notification Module
 import NotificationPage from "./modules/notification/pages/NotificationPage";
 
+// AI Chat Module
+import AiChat from "./modules/ai/pages/AiChat";
+
+
 function App() {
 
     const token =
@@ -102,6 +106,8 @@ function App() {
                     <Route path="/payments" element={withLayout(<PaymentHistory />)} />
 
                     <Route path="/notifications" element={withLayout(<NotificationPage />)} />
+
+                    <Route path="/ai-chat" element={<AiChat />} />
 
                     {/* ADMIN */}
 

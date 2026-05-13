@@ -23,5 +23,7 @@ public class NotificationResponseDto {
 
     private String type;
 
+    private String actionUrl;
+
     private LocalDateTime createdAt;
 }

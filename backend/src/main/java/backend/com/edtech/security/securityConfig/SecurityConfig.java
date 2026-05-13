@@ -75,6 +75,10 @@ public class SecurityConfig {
                                 ).permitAll()
 
                                 .requestMatchers(
+                                        "/api/ai/**"
+                                ).permitAll()
+
+                                .requestMatchers(
                                         "/api/exams/**",
                                         "/api/questions/**",
                                         "/api/results/**"

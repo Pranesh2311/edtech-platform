@@ -23,10 +23,7 @@ public class NotificationServiceImpl implements NotificationService {
     private final UserRepository userRepository;
 
     @Override
-    public NotificationResponseDto
-    createNotification(
-            NotificationRequestDto dto
-    ) {
+    public NotificationResponseDto createNotification(NotificationRequestDto dto) {
 
         User user =
                 userRepository.findById(
@@ -42,6 +39,7 @@ public class NotificationServiceImpl implements NotificationService {
                         .title(dto.getTitle())
                         .message(dto.getMessage())
                         .type(dto.getType())
+                        .actionUrl(dto.getActionUrl())
                         .readStatus(false)
                         .createdAt(
                                 LocalDateTime.now()
@@ -91,8 +89,7 @@ public class NotificationServiceImpl implements NotificationService {
         );
     }
 
-    private NotificationResponseDto
-    mapToDto(Notification n) {
+    private NotificationResponseDto mapToDto(Notification n) {
 
         return NotificationResponseDto
                 .builder()
@@ -100,12 +97,15 @@ public class NotificationServiceImpl implements NotificationService {
                 .title(n.getTitle())
                 .message(n.getMessage())
                 .type(n.getType())
-                .readStatus(
-                        n.isReadStatus()
-                )
-                .createdAt(
-                        n.getCreatedAt()
-                )
+                .readStatus(n.isReadStatus())
+                .actionUrl(n.getActionUrl())
+                .createdAt(n.getCreatedAt())
                 .build();
+    }
+
+    @Override
+    public void deleteNotification(Long id) {
+
+        notificationRepository.deleteById(id);
     }
 }

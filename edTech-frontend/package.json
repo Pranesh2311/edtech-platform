@@ -20,6 +20,7 @@
     "@tiptap/extension-underline": "^3.23.1",
     "@tiptap/react": "^3.23.1",
     "@tiptap/starter-kit": "^3.23.1",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "axios": "^1.16.0",
     "bootstrap": "^5.3.8",
     "framer-motion": "^12.38.0",
@@ -29,14 +30,18 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-katex": "^3.1.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^7.15.0",
-    "recharts": "^3.8.1"
+    "react-syntax-highlighter": "^16.1.1",
+    "recharts": "^3.8.1",
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@types/uuid": "^10.0.0",
     "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^10.2.1",
     "eslint-plugin-react-hooks": "^7.1.1",

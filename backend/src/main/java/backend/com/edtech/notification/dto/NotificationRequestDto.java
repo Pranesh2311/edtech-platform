@@ -11,5 +11,7 @@ public class NotificationRequestDto {
 
     private String type;
 
+    private String actionUrl;
+
     private Long userId;
 }

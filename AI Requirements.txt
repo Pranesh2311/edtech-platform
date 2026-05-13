@@ -1,0 +1,38 @@
+OVERALL AI FEATURES ROADMAP
+
+Your Ed-Tech AI System will include:
+
+Feature	Purpose
+AI Chatbot	Help & Support
+AI Doubt Solver	Student Q&A
+AI Teacher Assistant	Teacher help
+AI Course Recommender	Personalized suggestions
+AI Quiz Generator	Auto MCQ generation
+AI Notes Generator	Smart notes
+AI Resume Analyzer	Student career guidance
+AI Study Planner	Personalized study schedule
+AI Interview Assistant	Mock interview
+AI Coding Assistant	Coding support
+AI Analytics	Student performance insights
+AI Voice Assistant	Voice-based interaction
+AI PDF Reader	Upload & ask
+AI RAG System	Ask from course material
+AI Proctoring	Future advanced feature
+
+
+AFTER MEMORY
+
+Next:
+
+AI streaming
+ChatGPT typing effect
+Frontend AI UI
+AI markdown renderer
+AI role system
+Student AI tutor
+Teacher AI assistant
+AI quiz generator
+AI notes generator
+AI recommendation engine
+AI PDF chat system
+AI RAG architecture

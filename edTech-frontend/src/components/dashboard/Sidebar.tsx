@@ -5,7 +5,8 @@ import {
   LayoutDashboard, BookOpen, Users, GraduationCap, FileText,
   Video, ClipboardList, BarChart3, HelpCircle, FolderOpen,
   ChevronLeft, ChevronRight, LogOut, X,
-  Award, FileQuestion
+  Award, FileQuestion,
+  Bot
 } from 'lucide-react';
 import './Sidebar.css';
 
@@ -77,6 +78,7 @@ const Sidebar = ({ isCollapsed, onToggle, isMobileOpen, onMobileClose }: Sidebar
       title: 'Support',
       items: [
         { label: 'Doubts', path: '/doubts', icon: <HelpCircle size={20} /> },
+        { label: 'AI Tutor', path: '/ai-chat', icon: <Bot size={20} /> },
       ]
     }
   ];
@@ -113,6 +115,7 @@ const Sidebar = ({ isCollapsed, onToggle, isMobileOpen, onMobileClose }: Sidebar
       title: 'Support',
       items: [
         { label: 'Doubts', path: '/doubts', icon: <HelpCircle size={20} /> },
+        { label: 'AI Tutor', path: '/ai-chat', icon: <Bot size={20} /> },
       ]
     }
   ];

@@ -13,3 +13,7 @@ export const getUnreadCount =
 export const markAsRead =
     (id: number) =>
         api.put(`${API}/${id}/read`);
+
+export const deleteNotification =
+    (id: number) =>
+        api.delete(`/notifications/${id}`);    
